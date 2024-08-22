@@ -1,0 +1,23 @@
+# Ignore database files
+db.sqlite3
+
+# Ignore Django migrations (optional, for development)
+*/migrations/*.pyc
+*/migrations/*.pyo
+*/migrations/*.sqlite3
+
+# Ignore environment files
+.env
+.venv/
+venv/
+env/
+
+# Ignore compiled files
+*.pyc
+__pycache__/
+
+# Ignore static files collected by Django
+staticfiles/
+
+# Ignore media uploads
+media/
