@@ -15,6 +15,7 @@ def submit_recipie(request):
         recipe = Recipe(
             name=data['name'],
             image=data['image'],
+            ingridients =data['ingridients'],
             steps='\n'.join(data['steps'])  # Join the list of steps into a single string
         )
         
@@ -38,6 +39,7 @@ def fetch_recipie(request):
         {
             'name': recipe.name,
             'image': recipe.image,
+            'ingridients' : recipe.ingridients,
             'steps': recipe.steps.split('\n')  # Split the steps string into a list
         }
         for recipe in recipes

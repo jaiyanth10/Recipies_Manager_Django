@@ -13,7 +13,15 @@ const RecipeDetailPage = () => {
     <div className="recipe-detail">
       <img src={recipe.image} alt={recipe.name} className="recipe-image" />
       <h2 className="recipe-title">{recipe.name}</h2>
+      <br></br>
+      <h3 style={{ display: "flex", justifyContent: "flex-start" }}>
+        Ingredients :
+      </h3>
+      <p style={{ display: "flex", justifyContent: "flex-start" }}>{recipe.ingridients}</p>
       <div className="recipe-steps">
+      <h3 style={{ display: "flex", justifyContent: "flex-start" }}>
+        Steps :
+      </h3>
         {recipe.steps.map((step, index) => (
           <p key={index}>{`${step}`}</p>
         ))}
